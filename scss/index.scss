@@ -1,0 +1,322 @@
+@import "vars.scss";
+@import "base.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1em;
+    background-color: lighten($secondary-color,30);
+}
+
+.anchor {
+    position: absolute;
+    top: -65px;
+}
+
+.anchor2 {
+    position: absolute;
+    top: -165px;
+}
+
+.tech, .projects, .contact {
+    position: relative;
+}
+
+// menu css
+
+nav {
+    background-color: lighten($tertiary-color,15);
+}
+
+.nav-item {
+    font-size: 1.5em;
+}
+
+@media (min-width: 986px) {
+    .nav-item {
+        margin-left: 2.5em;
+    }
+}
+
+.nav-link {
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28242, 98, 65, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    border-color: $text-color;
+    border-width: .05em;
+    box-shadow: none;
+}
+
+
+// header css
+
+header{
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23032CA6' fill-opacity='0.55' d='M0 64L18.5 96C36.9 128 74 192 111 208C147.7 224 185 192 222 165.3C258.5 139 295 117 332 112C369.2 107 406 117 443 128C480 139 517 149 554 144C590.8 139 628 117 665 117.3C701.5 117 738 139 775 133.3C812.3 128 849 96 886 74.7C923.1 53 960 43 997 58.7C1033.8 75 1071 117 1108 154.7C1144.6 192 1182 224 1218 229.3C1255.4 235 1292 213 1329 202.7C1366.2 192 1403 192 1422 192L1440 192L1440 320L1421.5 320C1403.1 320 1366 320 1329 320C1292.3 320 1255 320 1218 320C1181.5 320 1145 320 1108 320C1070.8 320 1034 320 997 320C960 320 923 320 886 320C849.2 320 812 320 775 320C738.5 320 702 320 665 320C627.7 320 591 320 554 320C516.9 320 480 320 443 320C406.2 320 369 320 332 320C295.4 320 258 320 222 320C184.6 320 148 320 111 320C73.8 320 37 320 18 320L0 320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 92vh;
+    min-width: 300px;
+    display: flex;
+}
+
+@media (min-width: 900px) {
+    header {
+        height: 90.5vh;
+    }
+} 
+
+.desc {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile {
+    border-radius: 5em;
+}
+
+.about {
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.function {
+    flex-grow: 0.25;
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .about {
+        font-size: 1.05em;
+    }
+
+    .desc {
+        width: 90%;
+    }
+} 
+
+@media (max-width: 700px) {
+    .about {
+        font-size: 1em;
+    }
+}
+
+.name, .about, .function {
+    font-weight: 500;
+    opacity: 80%;
+    color: darken($text-color, 26);
+}
+
+
+// skills css
+
+.tech {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: lighten($main-color,20);
+    height: 100vh;
+    padding-top: 6em;
+}
+
+.sec1, .sec2 {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.sec1 h3, .sec2 h3 {
+    color: lighten($text-color,69);
+}
+
+.sec1 li, .sec2 li {
+    margin-top: 1em;
+}
+
+li > img {
+    width: $img-width;
+    height: $img-height;
+}
+
+
+// projects css
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    // gap: 0.05em;
+    justify-items: center;
+    // height: 100vh;
+}
+
+.projects-text {
+    text-align: center;
+    font-size: 2em;
+    color: $text-color;
+    // border: 2px solid red;
+}
+
+.card {
+    width: 80%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+.info {
+    position: absolute;
+    top: -1000px;
+    background-color: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2em;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    transition: top 0.75s ease-in-out;
+}
+
+.btn {
+    color: white;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card > img {
+    height: 50%;
+}
+
+
+// resources css
+
+.useful {
+    background-color: lighten($main-color, 30);
+    height: 100vh;
+}
+
+.sec1 ul, .sec2 ul {
+    list-style-type: none;
+}
+
+.sec2 {
+    text-align: center;
+}
+
+.r1 {
+    border-radius: 50%;
+    width: $img-width;
+    height: $img-height;
+}
+
+.redirect {
+    z-index: 99;
+    background-color: lighten($aux-color, 10);
+    border-radius: 50%;
+    padding: 1em;
+    padding-bottom: 0.3em;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    font-size: 1.15em;
+    width: 50px;
+    border: none;
+    color: $text-color;
+
+    &:hover {
+        box-shadow: 0px 0px 5px 3px orangered;
+        color: darken($text-color, 14);
+    }
+}
+
+// links css
+
+footer {
+    background-color: lighten($secondary-color, 5);
+    display: flex;
+    justify-content: center;
+    min-height: 10vh;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: darken($text-color,30);
+    padding-left: 1em;
+
+    &:hover {
+        color: yellow;
+    }
+}
+
+//contact css
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: lighten($tertiary-color, 25);
+
+    & h1, p {
+        color: darken($text-color, 10);
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    width: 90%;
+    border-radius: $border-corners;
+    // border: 2px solid pink;
+    background-color: $tertiary-color;
+    color: $text-color;
+
+    & label {
+        display: flex;
+        justify-content: flex-start;
+        // border: 2px solid red;
+        // flex: 2;
+        width: 80%;
+    }
+}
+
+input[type="text"], input[type="mail"] {
+    width: 80%;
+    padding: 0.15em;
+    border: none;
+    border-radius: $border-corners;
+    color: darken($text-color, 10);
+}
+
+textarea {
+    max-height: 45vh;
+    border: none;
+    border-radius: $border-corners;
+    color: darken($text-color, 10);
+}
+
+.required {
+    color: red;
+}
+
+.btn {
+    background-color: lighten(orangered, 15);
+
+    &:hover {
+        background-color: lighten(red, 15);
+        color: lighten($main-color, 30);
+    }
+}
