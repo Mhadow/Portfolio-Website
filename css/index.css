@@ -12181,8 +12181,14 @@ nav {
   background-color: #fdf8f0;
 }
 
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .nav-item {
   font-size: 1.5em;
+  height: 10vh;
 }
 
 @media (min-width: 986px) {
@@ -12198,6 +12204,14 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.active {
+  background-color: #0439d8;
 }
 
 .navbar-toggler-icon {
@@ -12320,6 +12334,7 @@ li > img {
   text-align: center;
   font-size: 2em;
   color: #F26241;
+  padding-top: 2em;
 }
 
 .card {

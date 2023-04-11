@@ -7,9 +7,9 @@
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#navId">
     <!-- menu  -->
-    <nav class="navbar navbar-expand-md sticky-top bg-body-primary">
+    <nav class="navbar navbar-expand-md sticky-top bg-body-primary" id="navId">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -62,8 +62,8 @@
     </header>
 
     <!-- technologies -->
-    <section class="tech mx-auto">
-      <a class="anchor" name="technologies"></a>
+    <section class="tech mx-auto" id="technologies">
+      <a class="anchor"></a>
       <article class="sec1">
         <h3>Technologies</h3>
         <ul>
@@ -126,210 +126,193 @@
     </section>
 
     <!-- projects section -->
-    <p class="projects-text p-3">Main projects</p>
-    <section class="projects p-1">
-      <a class="anchor2" name="projects"></a>
-      <article class="card" id="proj1">
-        <div class="info" id="pan1">
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >demo</a
-          >
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >code</a
-          >
-        </div>
-        <img
-          src="https://picsum.photos/450/450"
-          alt="project1"
-          class="card-image-top"
-        />
-        <div class="card-body">
-          <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptate libero dolorum error voluptatibus eligendi officiis
-            nesciunt qui itaque nisi.
-          </p>
-        </div>
-      </article>
 
-      <article class="card">
-        <div class="info" id="pan1">
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >demo</a
-          >
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >code</a
-          >
-        </div>
-        <img
-          src="https://picsum.photos/150/150"
-          alt="project1"
-          class="card-image-top"
-        />
-        <div class="card-body">
-          <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptate libero dolorum error voluptatibus eligendi officiis
-            nesciunt qui itaque nisi.
-          </p>
-        </div>
-      </article>
+    <section id="projects">
+      <p class="projects-text p-3">Main projects</p>
+      <a class="anchor2"></a>
+      <div class="projects">
+        <article class="card" id="proj1">
+          <div class="info" id="pan1">
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >demo</a
+            >
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >code</a
+            >
+          </div>
+          <img
+            src="https://picsum.photos/450/450"
+            alt="project1"
+            class="card-image-top"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              voluptate libero dolorum error voluptatibus eligendi officiis
+              nesciunt qui itaque nisi.
+            </p>
+          </div>
+        </article>
 
-      <article class="card">
-        <div class="info" id="pan1">
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >demo</a
-          >
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >code</a
-          >
-        </div>
-        <img
-          src="https://picsum.photos/150/150"
-          alt="project1"
-          class="card-image-top"
-        />
-        <div class="card-body">
-          <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptate libero dolorum error voluptatibus eligendi officiis
-            nesciunt qui itaque nisi.
-          </p>
-        </div>
-      </article>
+        <article class="card">
+          <div class="info" id="pan1">
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >demo</a
+            >
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >code</a
+            >
+          </div>
+          <img
+            src="https://picsum.photos/150/150"
+            alt="project1"
+            class="card-image-top"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              voluptate libero dolorum error voluptatibus eligendi officiis
+              nesciunt qui itaque nisi.
+            </p>
+          </div>
+        </article>
 
-      <article class="card">
-        <div class="info" id="pan1">
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >demo</a
-          >
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >code</a
-          >
-        </div>
-        <img
-          src="https://picsum.photos/150/150"
-          alt="project1"
-          class="card-image-top"
-        />
-        <div class="card-body">
-          <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptate libero dolorum error voluptatibus eligendi officiis
-            nesciunt qui itaque nisi.
-          </p>
-        </div>
-      </article>
+        <article class="card">
+          <div class="info" id="pan1">
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >demo</a
+            >
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >code</a
+            >
+          </div>
+          <img
+            src="https://picsum.photos/150/150"
+            alt="project1"
+            class="card-image-top"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              voluptate libero dolorum error voluptatibus eligendi officiis
+              nesciunt qui itaque nisi.
+            </p>
+          </div>
+        </article>
 
-      <article class="card">
-        <div class="info" id="pan1">
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >demo</a
-          >
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >code</a
-          >
-        </div>
-        <img
-          src="https://picsum.photos/150/150"
-          alt="project1"
-          class="card-image-top"
-        />
-        <div class="card-body">
-          <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptate libero dolorum error voluptatibus eligendi officiis
-            nesciunt qui itaque nisi.
-          </p>
-        </div>
-      </article>
+        <article class="card">
+          <div class="info" id="pan1">
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >demo</a
+            >
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >code</a
+            >
+          </div>
+          <img
+            src="https://picsum.photos/150/150"
+            alt="project1"
+            class="card-image-top"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              voluptate libero dolorum error voluptatibus eligendi officiis
+              nesciunt qui itaque nisi.
+            </p>
+          </div>
+        </article>
 
-      <article class="card">
-        <div class="info" id="pan1">
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >demo</a
-          >
-          <a
-            class="btn btn-info"
-            href="https://alvarotrigo.com/blog/css-animations-scroll/"
-            target="_blank"
-            >code</a
-          >
-        </div>
-        <img
-          src="https://picsum.photos/150/150"
-          alt="project1"
-          class="card-image-top"
-        />
-        <div class="card-body">
-          <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            voluptate libero dolorum error voluptatibus eligendi officiis
-            nesciunt qui itaque nisi.
-          </p>
-        </div>
-      </article>
+        <article class="card">
+          <div class="info" id="pan1">
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >demo</a
+            >
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >code</a
+            >
+          </div>
+          <img
+            src="https://picsum.photos/150/150"
+            alt="project1"
+            class="card-image-top"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              voluptate libero dolorum error voluptatibus eligendi officiis
+              nesciunt qui itaque nisi.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="info" id="pan1">
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >demo</a
+            >
+            <a
+              class="btn btn-info"
+              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              target="_blank"
+              >code</a
+            >
+          </div>
+          <img
+            src="https://picsum.photos/150/150"
+            alt="project1"
+            class="card-image-top"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              voluptate libero dolorum error voluptatibus eligendi officiis
+              nesciunt qui itaque nisi.
+            </p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- resources section -->
-
-    <!-- <section class="useful p-3">
-      <a class="anchor" name="learn"></a>
-
-      <h1 class="resources-title">How I learned</h1>
-      <ul>
-        <li class="resource">
-          <a href="https://www.freecodecamp.org/" target="_blank">
-            <img
-              src="https://yt3.googleusercontent.com/ytc/AL5GRJXPR4dSz0wwP-elkeiWUMnfZlCtNZP8Rd-tmFOZYg=s900-c-k-c0x00ffffff-no-rj"
-              alt="resource"
-              class="r1"
-          /></a>
-        </li>
-        <li class="resource"></li>
-        <li class="resource"></li>
-        <li class="resource"></li>
-      </ul>
-    </section> -->
     <button
       type="button"
       class="redirect"
@@ -342,9 +325,9 @@
 
     <!-- contact section -->
 
-    <section class="contact p-4">
-      <a class="anchor" name="contact"></a>
-      <h1>Shoot 'em all</h1>
+    <section class="contact p-4" id="contact">
+      <a class="anchor"></a>
+      <h1 class="pt-5">Shoot 'em all</h1>
       <p class="message">If you have any questions, please ask them below</p>
       <form method="post" action="mail_handler.php" class="py-2">
         <label for="name">Name:<span class="required">*</span></label>
