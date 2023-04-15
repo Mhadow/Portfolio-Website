@@ -2,11 +2,18 @@
 @import "base.scss";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4em;
+}
+
 body {
     font-family: 'Shadows Into Light', cursive;
     font-size: 1em;
     background-color: lighten($secondary-color,30);
 }
+
+// misc
 
 .anchor {
     position: absolute;
@@ -20,6 +27,71 @@ body {
 
 .tech, .projects, .contact {
     position: relative;
+}
+
+
+// animations 
+
+@keyframes svg_anim {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 1400;
+    }
+    
+}
+
+@keyframes svg_flag_pole {
+    from {
+        stroke-width: 0;
+    }
+
+    to {
+        stroke-width: 4;
+    }
+    
+}
+
+@keyframes svg_flag {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes svg_circle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hint-show {
+//    0% {
+//         left: -100em;
+//     }
+
+    0% {
+       width: 0%;
+    }
+
+    50% {
+       background-color: yellow;
+       width: 30%;
+
+    }
+
+    100% {
+        background-color: inherit;
+        width: 30%;
+    }
 }
 
 // menu css
@@ -57,7 +129,6 @@ nav {
     background-color: lighten($aux-color, 10);
 }
 
-
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28242, 98, 65, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -69,7 +140,6 @@ nav {
     border-width: .05em;
     box-shadow: none;
 }
-
 
 // header css
 
@@ -130,8 +200,95 @@ header{
     color: darken($text-color, 26);
 }
 
+// TIMELINE CSS
 
-// skills css
+.timeline {
+    padding: 0;
+    margin: 0;
+    background-color: lighten($main-color, 10);
+    height: 91.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    svg {
+        width: 98.9vw;
+        height: 65vh;
+        position: relative;
+
+    }
+
+    .hint {
+        color: darken($text-color, 26);
+        background-color: inherit;
+        width: 0%;
+        height: 4%;
+        overflow: hidden;
+    }
+}
+
+    .hint-anim {
+        animation: hint-show 1.5s ease-in-out 3s both;
+    }
+
+
+// SVG CSS
+
+.svg-progress {
+    animation: svg_anim 3s ease-in-out both;
+}
+
+// 1st flag
+
+.svg-flag-outer-circle1 {
+    animation: svg_circle 1s ease-in-out 1.15s both;
+}
+
+.svg-flag-circle1 {
+    animation: svg_circle 1s ease-in-out 1.35s both;
+}
+
+.svg-pole1 {
+    animation: svg_flag_pole 1s ease-in-out 1s both;
+}
+
+.svg-flag1 {
+    animation: svg_flag 1s ease-in-out 1s both;
+}
+
+//2nd flag
+
+.svg-flag-outer-circle2 {
+    animation: svg_circle 1s ease-in-out 1.5s both;
+}
+
+.svg-flag-circle2 {
+    animation: svg_circle 1s ease-in-out 1.5s both;
+}
+
+.svg-pole2 {
+    animation: svg_flag_pole 1s ease-in-out 1.6s both;
+}
+
+.svg-flag2 {
+    animation: svg_flag 1s ease-in-out 1.7s both;
+}
+
+.svg-progress, .svg-flag-circle1, .svg-flag-circle2, .svg-flag-outer-circle1, .svg-flag-outer-circle2, .svg-flag1, .svg-flag2, .svg-pole1, .svg-pole2 {
+    cursor: pointer;
+}
+
+.svg-text {
+    fill: darken($main-color, 25);
+    font-size: 1em;
+    animation: svg_circle 1s ease-in-out 2.15s both;
+}
+
+.svg-arrow {
+    animation: svg_circle 0.3s ease-in-out 2.8s both;
+}
+
+// tech css
 
 .tech {
     display: flex;
@@ -167,10 +324,7 @@ li > img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    // gap: 0.05em;
     justify-items: center;
-    // padding-top: 2em;
-    // height: 100vh;
 }
 
 .projects-text {
@@ -296,15 +450,12 @@ form {
     gap: 0.5em;
     width: 90%;
     border-radius: $border-corners;
-    // border: 2px solid pink;
     background-color: $tertiary-color;
     color: $text-color;
 
     & label {
         display: flex;
         justify-content: flex-start;
-        // border: 2px solid red;
-        // flex: 2;
         width: 80%;
     }
 }

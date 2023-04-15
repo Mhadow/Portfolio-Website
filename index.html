@@ -9,6 +9,7 @@
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navId">
     <!-- menu  -->
+
     <nav class="navbar navbar-expand-md sticky-top bg-body-primary" id="navId">
       <div class="container-fluid">
         <button
@@ -24,6 +25,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarToggle">
           <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#timeline">Timeline</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#technologies">Tech/Tools</a>
             </li>
@@ -60,6 +64,106 @@
         </p>
       </section>
     </header>
+
+    <!-- timeline -->
+    <section class="timeline container-fluid" id="timeline">
+      <svg>
+        <rect
+          x="50"
+          y="225"
+          width="1400"
+          height="20"
+          rx="5"
+          fill="green"
+          class="svg-progress"
+        />
+
+        <!-- first milestone -->
+        <circle
+          cx="400"
+          cy="235"
+          r="5"
+          stroke="black"
+          stroke-width="3"
+          class="svg-flag-circle1"
+          data-bs-toggle="tooltip"
+          data-bs-placement="bottom"
+          data-bs-title="Colegiul National 'Anastasescu'"
+        />
+        <circle
+          cx="400"
+          cy="235"
+          r="9"
+          stroke="lightblue"
+          stroke-width="2"
+          fill="none"
+          class="svg-flag-outer-circle1"
+        />
+        <polygon
+          points="398,165 439,165 439,190 398,190"
+          stroke="red"
+          fill="red"
+          stroke-width="1"
+          class="svg-flag1"
+        />
+        <line
+          x1="400"
+          y1="235"
+          x2="400"
+          y2="165"
+          stroke="black"
+          stroke-width="1"
+          class="svg-pole1"
+        />
+
+        <!-- second milestone -->
+        <circle
+          cx="800"
+          cy="235"
+          r="5"
+          stroke="black"
+          stroke-width="3"
+          class="svg-flag-circle2"
+          data-bs-toggle="tooltip"
+          data-bs-placement="bottom"
+          data-bs-title="Universitatea Politehnica Bucuresti"
+        />
+        <circle
+          cx="800"
+          cy="235"
+          r="9"
+          stroke="lightblue"
+          stroke-width="2"
+          fill="none"
+          class="svg-flag-outer-circle2"
+        />
+        <polygon
+          points="798,165 839,165 839,190 798,190"
+          stroke="red"
+          fill="red"
+          stroke-width="1"
+          class="svg-flag2"
+        />
+        <line
+          x1="800"
+          y1="235"
+          x2="800"
+          y2="165"
+          stroke="black"
+          stroke-width="1"
+          class="svg-pole2"
+        />
+
+        <text x="1200" y="200" class="svg-text">To be continued...</text>
+
+        <!-- arrow head -->
+
+        <polygon points="1440 215 1460 235 1440 255" class="svg-arrow" />
+      </svg>
+      <p class="hint ps-2">
+        * Place cursor at the bottom of the flag for info.
+      </p>
+    </section>
 
     <!-- technologies -->
     <section class="tech mx-auto" id="technologies">
@@ -126,7 +230,6 @@
     </section>
 
     <!-- projects section -->
-
     <section id="projects">
       <p class="projects-text p-3">Main projects</p>
       <a class="anchor2"></a>
@@ -324,7 +427,6 @@
     </button>
 
     <!-- contact section -->
-
     <section class="contact p-4" id="contact">
       <a class="anchor"></a>
       <h1 class="pt-5">Shoot 'em all</h1>
@@ -348,7 +450,6 @@
       <a href="#" class="linkedin">Linkedin Profile</a>
     </footer>
 
-    <script src="/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -359,5 +460,6 @@
       integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
       crossorigin="anonymous"
     ></script>
+    <script src="/index.js"></script>
   </body>
 </html>

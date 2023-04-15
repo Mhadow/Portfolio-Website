@@ -12157,6 +12157,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4em;
+}
+
 body {
   font-family: "Shadows Into Light", cursive;
   font-size: 1em;
@@ -12177,6 +12182,97 @@ body {
   position: relative;
 }
 
+@-webkit-keyframes svg_anim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1400;
+  }
+}
+
+@keyframes svg_anim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1400;
+  }
+}
+@-webkit-keyframes svg_flag_pole {
+  from {
+    stroke-width: 0;
+  }
+  to {
+    stroke-width: 4;
+  }
+}
+@keyframes svg_flag_pole {
+  from {
+    stroke-width: 0;
+  }
+  to {
+    stroke-width: 4;
+  }
+}
+@-webkit-keyframes svg_flag {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes svg_flag {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes svg_circle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes svg_circle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes hint-show {
+  0% {
+    width: 0%;
+  }
+  50% {
+    background-color: yellow;
+    width: 30%;
+  }
+  100% {
+    background-color: inherit;
+    width: 30%;
+  }
+}
+@keyframes hint-show {
+  0% {
+    width: 0%;
+  }
+  50% {
+    background-color: yellow;
+    width: 30%;
+  }
+  100% {
+    background-color: inherit;
+    width: 30%;
+  }
+}
 nav {
   background-color: #fdf8f0;
 }
@@ -12289,6 +12385,101 @@ header {
   font-weight: 500;
   opacity: 80%;
   color: #a3280b;
+}
+
+.timeline {
+  padding: 0;
+  margin: 0;
+  background-color: #579cf5;
+  height: 91.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.timeline svg {
+  width: 98.9vw;
+  height: 65vh;
+  position: relative;
+}
+.timeline .hint {
+  color: #a3280b;
+  background-color: inherit;
+  width: 0%;
+  height: 4%;
+  overflow: hidden;
+}
+
+.hint-anim {
+  -webkit-animation: hint-show 1.5s ease-in-out 3s both;
+          animation: hint-show 1.5s ease-in-out 3s both;
+}
+
+.svg-progress {
+  -webkit-animation: svg_anim 3s ease-in-out both;
+          animation: svg_anim 3s ease-in-out both;
+}
+
+.svg-flag-outer-circle1 {
+  -webkit-animation: svg_circle 1s ease-in-out 1.15s both;
+          animation: svg_circle 1s ease-in-out 1.15s both;
+}
+
+.svg-flag-circle1 {
+  -webkit-animation: svg_circle 1s ease-in-out 1.35s both;
+          animation: svg_circle 1s ease-in-out 1.35s both;
+}
+
+.svg-pole1 {
+  -webkit-animation: svg_flag_pole 1s ease-in-out 1s both;
+          animation: svg_flag_pole 1s ease-in-out 1s both;
+}
+
+.svg-flag1 {
+  -webkit-animation: svg_flag 1s ease-in-out 1s both;
+          animation: svg_flag 1s ease-in-out 1s both;
+}
+
+.svg-flag-outer-circle2 {
+  -webkit-animation: svg_circle 1s ease-in-out 1.5s both;
+          animation: svg_circle 1s ease-in-out 1.5s both;
+}
+
+.svg-flag-circle2 {
+  -webkit-animation: svg_circle 1s ease-in-out 1.5s both;
+          animation: svg_circle 1s ease-in-out 1.5s both;
+}
+
+.svg-pole2 {
+  -webkit-animation: svg_flag_pole 1s ease-in-out 1.6s both;
+          animation: svg_flag_pole 1s ease-in-out 1.6s both;
+}
+
+.svg-flag2 {
+  -webkit-animation: svg_flag 1s ease-in-out 1.7s both;
+          animation: svg_flag 1s ease-in-out 1.7s both;
+}
+
+.svg-progress, .svg-flag-circle1, .svg-flag-circle2, .svg-flag-outer-circle1, .svg-flag-outer-circle2, .svg-flag1, .svg-flag2, .svg-pole1, .svg-pole2 {
+  cursor: pointer;
+}
+
+.svg-text {
+  fill: #094491;
+  font-size: 1em;
+  -webkit-animation: svg_circle 1s ease-in-out 2.15s both;
+          animation: svg_circle 1s ease-in-out 2.15s both;
+}
+
+.svg-arrow {
+  -webkit-animation: svg_circle 0.3s ease-in-out 2.8s both;
+          animation: svg_circle 0.3s ease-in-out 2.8s both;
 }
 
 .tech {
