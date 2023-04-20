@@ -43,6 +43,7 @@
     </nav>
 
     <!-- header -->
+
     <header id="info">
       <section class="desc mx-auto my-4">
         <img
@@ -66,11 +67,13 @@
     </header>
 
     <!-- timeline -->
+
     <section class="timeline container-fluid" id="timeline">
-      <svg>
+      <h3 class="timeline-title">Journey so far</h3>
+      <svg class="timeline-svg" viewBox="0 0 1500 20">
         <rect
           x="50"
-          y="225"
+          y="-120"
           width="1400"
           height="20"
           rx="5"
@@ -79,93 +82,137 @@
         />
 
         <!-- first milestone -->
+
         <circle
           cx="400"
-          cy="235"
+          cy="-110"
           r="5"
           stroke="black"
           stroke-width="3"
-          class="svg-flag-circle1"
+          class="svg-flag-c1"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
           data-bs-title="Colegiul National 'Anastasescu'"
         />
+
         <circle
           cx="400"
-          cy="235"
+          cy="-110"
           r="9"
           stroke="lightblue"
           stroke-width="2"
           fill="none"
-          class="svg-flag-outer-circle1"
+          class="svg-flag-outer-c1"
         />
+
         <polygon
-          points="398,165 439,165 439,190 398,190"
+          points="398,-190 439,-190 439,-165 398,-165"
           stroke="red"
           fill="red"
           stroke-width="1"
           class="svg-flag1"
         />
+
         <line
           x1="400"
-          y1="235"
+          y1="-110"
           x2="400"
-          y2="165"
+          y2="-190"
           stroke="black"
           stroke-width="1"
           class="svg-pole1"
         />
 
         <!-- second milestone -->
+
         <circle
-          cx="800"
-          cy="235"
+          cx="920"
+          cy="-110"
           r="5"
           stroke="black"
           stroke-width="3"
-          class="svg-flag-circle2"
+          class="svg-flag-c2"
           data-bs-toggle="tooltip"
           data-bs-placement="bottom"
-          data-bs-title="Universitatea Politehnica Bucuresti"
+          data-bs-title="text longer to be shown"
         />
+
         <circle
-          cx="800"
-          cy="235"
+          cx="920"
+          cy="-110"
           r="9"
           stroke="lightblue"
           stroke-width="2"
           fill="none"
-          class="svg-flag-outer-circle2"
+          class="svg-flag-outer-c2"
         />
+
         <polygon
-          points="798,165 839,165 839,190 798,190"
+          points="918,-190 959,-190 959,-165 918,-165"
           stroke="red"
           fill="red"
           stroke-width="1"
           class="svg-flag2"
         />
+
         <line
-          x1="800"
-          y1="235"
-          x2="800"
-          y2="165"
+          x1="920"
+          y1="-110"
+          x2="920"
+          y2="-190"
           stroke="black"
           stroke-width="1"
           class="svg-pole2"
         />
 
-        <text x="1200" y="200" class="svg-text">To be continued...</text>
+        <text x="1220" y="-140" class="svg-text">To be continued...</text>
 
         <!-- arrow head -->
 
-        <polygon points="1440 215 1460 235 1440 255" class="svg-arrow" />
+        <polygon points="1440 -130 1460 -110 1440 -90" class="svg-arrow" />
       </svg>
-      <p class="hint ps-2">
-        * Place cursor at the bottom of the flag for info.
+
+      <section class="info-extra">
+        <article class="card card-ed">
+          <img
+            src="https://picsum.photos/450/450"
+            alt="school"
+            class="card-image-top card-image-ed"
+          />
+          <div class="card-body card-body-ed">
+            <h5 class="card-title card-title-ed">Lorem, ipsum dolor.</h5>
+            <p class="card-text card-text-ed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, rem
+              necessitatibus tempore itaque adipisci id repudiandae
+              exercitationem nihil similique quasi.
+            </p>
+          </div>
+        </article>
+
+        <article class="card card-ed2">
+          <img
+            src="https://picsum.photos/450/450"
+            alt="school"
+            class="card-image-top card-image-ed"
+          />
+          <div class="card-body card-body-ed">
+            <h5 class="card-title card-title-ed">Lorem, ipsum dolor.</h5>
+            <p class="card-text card-text-ed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, rem
+              necessitatibus tempore itaque adipisci id repudiandae
+              exercitationem nihil similique quasi.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <p class="hint ps-2 mt-1">
+        * Click (double click to close) on the flag for more.
       </p>
     </section>
 
     <!-- technologies -->
+
     <section class="tech mx-auto" id="technologies">
       <a class="anchor"></a>
       <article class="sec1">
@@ -230,11 +277,12 @@
     </section>
 
     <!-- projects section -->
+
     <section id="projects">
       <p class="projects-text p-3">Main projects</p>
       <a class="anchor2"></a>
       <div class="projects">
-        <article class="card" id="proj1">
+        <article class="card card-proj" id="proj1">
           <div class="info" id="pan1">
             <a
               class="btn btn-info"
@@ -257,15 +305,16 @@
           <div class="card-body">
             <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-              voluptate libero dolorum error voluptatibus eligendi officiis
-              nesciunt qui itaque nisi.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
+              distinctio. Provident, quidem deleniti, ipsam ratione ipsum eaque
+              amet voluptatibus consequuntur voluptatem ab consequatur adipisci,
+              error tenetur officia soluta minima mollitia.
             </p>
           </div>
         </article>
 
-        <article class="card">
-          <div class="info" id="pan1">
+        <article class="card card-proj">
+          <div class="info" id="pan2">
             <a
               class="btn btn-info"
               href="https://alvarotrigo.com/blog/css-animations-scroll/"
@@ -294,8 +343,8 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="info" id="pan1">
+        <article class="card card-proj">
+          <div class="info" id="pan3">
             <a
               class="btn btn-info"
               href="https://alvarotrigo.com/blog/css-animations-scroll/"
@@ -324,8 +373,8 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="info" id="pan1">
+        <article class="card card-proj">
+          <div class="info" id="pan4">
             <a
               class="btn btn-info"
               href="https://alvarotrigo.com/blog/css-animations-scroll/"
@@ -354,8 +403,8 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="info" id="pan1">
+        <article class="card card-proj">
+          <div class="info" id="pan5">
             <a
               class="btn btn-info"
               href="https://alvarotrigo.com/blog/css-animations-scroll/"
@@ -384,8 +433,8 @@
           </div>
         </article>
 
-        <article class="card">
-          <div class="info" id="pan1">
+        <article class="card card-proj">
+          <div class="info" id="pan6">
             <a
               class="btn btn-info"
               href="https://alvarotrigo.com/blog/css-animations-scroll/"
@@ -427,11 +476,84 @@
     </button>
 
     <!-- contact section -->
+
     <section class="contact p-4" id="contact">
       <a class="anchor"></a>
-      <h1 class="pt-5">Shoot 'em all</h1>
-      <p class="message">If you have any questions, please ask them below</p>
-      <form method="post" action="mail_handler.php" class="py-2">
+      <h1 class="pt-lg-5">Contact</h1>
+      <p class="message pb-sm-2">
+        For any questions, please click on one of the options below
+      </p>
+      <ul class="list">
+        <li>
+          <a href="#" target="_blank" class="list-link">Hover over me</a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="list-link">Hover over me</a>
+        </li>
+        <li id="contact-mail">Hover over me</li>
+        <li id="contact-phone">Hover over me</li>
+      </ul>
+
+      <!-- TOASTS -->
+
+      <div class="toast-container position-fixed bottom-0 start-0">
+        <!-- toast for mail -->
+
+        <div class="toast" id="toast-el" data-bs-delay="10000">
+          <div class="toast-header">
+            <strong>Notice</strong>
+            <button
+              type="button"
+              data-bs-dismiss="toast"
+              class="btn-close"
+            ></button>
+          </div>
+          <div class="toast-body">Mail copied to clipboard.</div>
+        </div>
+
+        <!-- toast for phone number -->
+
+        <div class="toast mb-2" id="toast-el2" data-bs-delay="10000">
+          <div class="toast-header">
+            <strong>Notice</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+            ></button>
+          </div>
+          <div class="toast-body">Phone number copied to clipboard.</div>
+        </div>
+      </div>
+
+      <!-- <svg class="contact-blocks" viewBox="-100 -100,500,500">
+        <rect x="-100" y="100" width="150" height="150" class="contact-box1" />
+        <rect
+          x="10"
+          y="250"
+          width="100"
+          height="100"
+          fill="red"
+          class="contact-box2"
+        />
+        <rect
+          x="100"
+          y="50"
+          width="100"
+          height="100"
+          fill="blue"
+          class="contact-box3"
+        />
+        <rect
+          x="300"
+          y="250"
+          width="100"
+          height="100"
+          fill="green"
+          class="contact-box4"
+        />
+      </svg> -->
+      <!-- <form method="post" action="mail_handler.php" class="py-2">
         <label for="name">Name:<span class="required">*</span></label>
         <input type="text" name="name" required />
         <label for="mail">Email:<span class="required">*</span></label>
@@ -439,15 +561,16 @@
         <label for="message">Please type your message here:</label>
         <textarea name="message" id="textBlock" cols="30" rows="6"></textarea>
         <input type="submit" class="btn" name="submit" />
-      </form>
+      </form> -->
     </section>
 
     <!-- links section -->
 
-    <footer class="links p-3" id="links">
-      <a href="#" class="linkedin">Linkedin Profile</a>
-      <a href="#" class="linkedin">Linkedin Profile</a>
-      <a href="#" class="linkedin">Linkedin Profile</a>
+    <footer class="links pt-4" id="links">
+      <p class="footer-text">
+        &copy;Copyright 2023. Made by
+        <span class="footer-name">Madalin ROBU</span>
+      </p>
     </footer>
 
     <script

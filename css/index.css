@@ -12159,9 +12159,14 @@ textarea.form-control-lg {
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4em;
+  scroll-padding-top: 3.45em;
 }
 
+@media (min-width: 986px) {
+  html {
+    scroll-padding-top: 4em;
+  }
+}
 body {
   font-family: "Shadows Into Light", cursive;
   font-size: 1em;
@@ -12180,6 +12185,26 @@ body {
 
 .tech, .projects, .contact {
   position: relative;
+}
+
+.redirect {
+  z-index: 99;
+  background-color: #0439d8;
+  border-radius: 50%;
+  padding: 1em;
+  padding-bottom: 0.3em;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  font-size: 1.15em;
+  width: 50px;
+  border: none;
+  color: #F26241;
+}
+.redirect:hover {
+  -webkit-box-shadow: 0px 0px 5px 3px orangered;
+          box-shadow: 0px 0px 5px 3px orangered;
+  color: #dd350f;
 }
 
 @-webkit-keyframes svg_anim {
@@ -12249,28 +12274,44 @@ body {
 }
 @-webkit-keyframes hint-show {
   0% {
-    width: 0%;
+    width: 0;
   }
   50% {
     background-color: yellow;
-    width: 30%;
+    width: 25em;
   }
   100% {
     background-color: inherit;
-    width: 30%;
+    width: 25em;
   }
 }
 @keyframes hint-show {
   0% {
-    width: 0%;
+    width: 0;
   }
   50% {
     background-color: yellow;
-    width: 30%;
+    width: 25em;
   }
   100% {
     background-color: inherit;
-    width: 30%;
+    width: 25em;
+  }
+}
+@-webkit-keyframes svg-anim {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes svg-anim {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
 nav {
@@ -12278,10 +12319,14 @@ nav {
 }
 
 .navbar {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0.5em 0;
 }
 
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0;
+  }
+}
 .nav-item {
   font-size: 1.5em;
   height: 10vh;
@@ -12391,7 +12436,7 @@ header {
   padding: 0;
   margin: 0;
   background-color: #579cf5;
-  height: 91.5vh;
+  height: 120vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12402,86 +12447,176 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.timeline svg {
-  width: 98.9vw;
-  height: 65vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 .timeline .hint {
-  color: #a3280b;
-  background-color: inherit;
-  width: 0%;
-  height: 4%;
-  overflow: hidden;
+  display: none;
+}
+@media (min-width: 986px) {
+  .timeline .hint {
+    color: #a3280b;
+    background-color: inherit;
+    width: 0;
+    height: 4vh;
+    overflow: hidden;
+    position: absolute;
+    bottom: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.timeline-title {
+  text-align: center;
+  color: #fac5b8;
+  height: 3vh;
+  margin-top: 2em;
 }
 
 .hint-anim {
-  -webkit-animation: hint-show 1.5s ease-in-out 3s both;
-          animation: hint-show 1.5s ease-in-out 3s both;
+  -webkit-animation: hint-show 3s ease-in-out 3s both;
+          animation: hint-show 3s ease-in-out 3s both;
 }
 
-.svg-progress {
-  -webkit-animation: svg_anim 3s ease-in-out both;
-          animation: svg_anim 3s ease-in-out both;
+.card-ed, .card-ed2 {
+  height: 48vh;
+  width: 90%;
+  color: #e7be6c;
+  background-color: #f04e29;
+  border: none;
+  margin: 0 auto;
+  position: relative;
+  top: 1em;
+  visibility: visible;
 }
 
-.svg-flag-outer-circle1 {
-  -webkit-animation: svg_circle 1s ease-in-out 1.15s both;
-          animation: svg_circle 1s ease-in-out 1.15s both;
+.card-ed2 {
+  left: 0;
+  top: 5%;
+  margin-bottom: 4em;
 }
 
-.svg-flag-circle1 {
-  -webkit-animation: svg_circle 1s ease-in-out 1.35s both;
-          animation: svg_circle 1s ease-in-out 1.35s both;
+.card-image-ed {
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
 }
 
-.svg-pole1 {
-  -webkit-animation: svg_flag_pole 1s ease-in-out 1s both;
-          animation: svg_flag_pole 1s ease-in-out 1s both;
+.card-body-ed {
+  width: 100%;
 }
 
-.svg-flag1 {
-  -webkit-animation: svg_flag 1s ease-in-out 1s both;
-          animation: svg_flag 1s ease-in-out 1s both;
+.card-title-ed {
+  color: #491205;
 }
 
-.svg-flag-outer-circle2 {
-  -webkit-animation: svg_circle 1s ease-in-out 1.5s both;
-          animation: svg_circle 1s ease-in-out 1.5s both;
+@media (min-width: 986px) {
+  .timeline-title {
+    height: 5vh;
+    padding-top: 0;
+  }
+  .card-ed, .card-ed2 {
+    height: 48vh;
+    width: 22vw;
+    -webkit-box-shadow: 0.25em 0.25em 0.2em 0.25em rgba(0, 0, 0, 0.55);
+            box-shadow: 0.25em 0.25em 0.2em 0.25em rgba(0, 0, 0, 0.55);
+    visibility: hidden;
+  }
+  .info-extra {
+    width: 90vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 3em;
+  }
+  .card-image-ed {
+    width: 22vw;
+    height: 40%;
+    overflow: hidden;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+  }
+  .card-body-ed {
+    width: 22vw;
+  }
+  .card-title-ed {
+    color: #491205;
+  }
 }
-
-.svg-flag-circle2 {
-  -webkit-animation: svg_circle 1s ease-in-out 1.5s both;
-          animation: svg_circle 1s ease-in-out 1.5s both;
+@media (min-width: 986px) {
+  .timeline-svg {
+    width: 100%;
+    height: 85vh;
+    padding: 1em;
+    position: absolute;
+  }
+  .svg-show {
+    -webkit-animation: svg-anim 1.5s ease-in-out both;
+            animation: svg-anim 1.5s ease-in-out both;
+  }
+  .svg-progress {
+    -webkit-animation: svg_anim 3s ease-in-out both;
+            animation: svg_anim 3s ease-in-out both;
+  }
+  .svg-flag-outer-c1 {
+    -webkit-animation: svg_circle 1s ease-in-out 1.15s both;
+            animation: svg_circle 1s ease-in-out 1.15s both;
+  }
+  .svg-flag-c1 {
+    -webkit-animation: svg_circle 1s ease-in-out 1.35s both;
+            animation: svg_circle 1s ease-in-out 1.35s both;
+  }
+  .svg-pole1 {
+    -webkit-animation: svg_flag_pole 1s ease-in-out 1s both;
+            animation: svg_flag_pole 1s ease-in-out 1s both;
+  }
+  .svg-flag1 {
+    -webkit-animation: svg_flag 1s ease-in-out 1s both;
+            animation: svg_flag 1s ease-in-out 1s both;
+  }
+  .svg-flag-outer-c2 {
+    -webkit-animation: svg_circle 1s ease-in-out 1.5s both;
+            animation: svg_circle 1s ease-in-out 1.5s both;
+  }
+  .svg-flag-c2 {
+    -webkit-animation: svg_circle 1s ease-in-out 1.5s both;
+            animation: svg_circle 1s ease-in-out 1.5s both;
+  }
+  .svg-pole2 {
+    -webkit-animation: svg_flag_pole 1s ease-in-out 1.6s both;
+            animation: svg_flag_pole 1s ease-in-out 1.6s both;
+  }
+  .svg-flag2 {
+    -webkit-animation: svg_flag 1s ease-in-out 1.7s both;
+            animation: svg_flag 1s ease-in-out 1.7s both;
+  }
+  .svg-flag1, .svg-flag2 {
+    cursor: pointer;
+  }
+  .svg-text {
+    fill: #094491;
+    font-size: 1em;
+  }
+  .svg-text {
+    -webkit-animation: svg_circle 1s ease-in-out 2.15s both;
+            animation: svg_circle 1s ease-in-out 2.15s both;
+  }
+  .svg-arrow {
+    -webkit-animation: svg_circle 0.3s ease-in-out 2.8s both;
+            animation: svg_circle 0.3s ease-in-out 2.8s both;
+  }
 }
-
-.svg-pole2 {
-  -webkit-animation: svg_flag_pole 1s ease-in-out 1.6s both;
-          animation: svg_flag_pole 1s ease-in-out 1.6s both;
-}
-
-.svg-flag2 {
-  -webkit-animation: svg_flag 1s ease-in-out 1.7s both;
-          animation: svg_flag 1s ease-in-out 1.7s both;
-}
-
-.svg-progress, .svg-flag-circle1, .svg-flag-circle2, .svg-flag-outer-circle1, .svg-flag-outer-circle2, .svg-flag1, .svg-flag2, .svg-pole1, .svg-pole2 {
-  cursor: pointer;
-}
-
-.svg-text {
-  fill: #094491;
-  font-size: 1em;
-  -webkit-animation: svg_circle 1s ease-in-out 2.15s both;
-          animation: svg_circle 1s ease-in-out 2.15s both;
-}
-
-.svg-arrow {
-  -webkit-animation: svg_circle 0.3s ease-in-out 2.8s both;
-          animation: svg_circle 0.3s ease-in-out 2.8s both;
-}
-
 .tech {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12494,6 +12629,14 @@ header {
   background-color: #87b8f8;
   height: 100vh;
   padding-top: 6em;
+}
+
+.sec1 ul, .sec2 ul {
+  list-style-type: none;
+}
+
+.sec2 {
+  text-align: center;
 }
 
 .sec1, .sec2 {
@@ -12515,10 +12658,22 @@ li > img {
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  justify-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 1em;
+  width: 90vw;
+  padding-left: 15vw;
+  margin-bottom: 1em;
 }
 
 .projects-text {
@@ -12528,9 +12683,9 @@ li > img {
   padding-top: 2em;
 }
 
-.card {
-  width: 80%;
-  height: 90%;
+.card-proj {
+  width: 90%;
+  height: 50%;
   overflow: hidden;
   position: relative;
 }
@@ -12559,55 +12714,360 @@ li > img {
   color: white;
 }
 
-.card:hover {
+.card-proj:hover {
   cursor: pointer;
 }
 
-.card > img {
-  height: 50%;
+.card-proj > img {
+  height: 25%;
+  width: 100%;
 }
 
-.useful {
-  background-color: #b7d5fb;
+@media screen and (min-width: 786px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-template-rows: repeat(auto-fit, 650px);
+    justify-items: center;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+  .card-proj {
+    height: 80%;
+  }
+  .card-proj > img {
+    height: 50%;
+  }
+}
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #fdf8f0;
+}
+.contact h1, .contact .h1, .contact p {
+  color: #ef3b11;
+}
+
+.contact-blocks {
+  width: 95vw;
   height: 100vh;
 }
 
-.sec1 ul, .sec2 ul {
+.list {
+  height: 80vh;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+.list li {
   list-style-type: none;
+  -webkit-box-shadow: 0.25em 0.25em 1em 0.5em rgba(27, 59, 131, 0.5);
+          box-shadow: 0.25em 0.25em 1em 0.5em rgba(27, 59, 131, 0.5);
+  cursor: pointer;
+  font-size: 0.75em;
+  width: 75vw;
+  height: 25vw;
+  border: 1px solid inherit;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+.list li:first-child a, .list li:nth-child(2) a {
+  background-color: #0072b1;
+  border: 1px solid inherit;
+  border-radius: 0.5em;
+  overflow: hidden;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.list li:first-child a:hover, .list li:nth-child(2) a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-image: url("https://about.linkedin.com/etc.clientlibs/settings/wcm/designs/gandalf/clientlibs/resources/images/og-social-share-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.list li:nth-child(2) a {
+  background-color: #f9efda;
+}
+.list li:nth-child(2) a:hover {
+  background-image: url("https://lthub.ubc.ca/files/2021/06/GitHub-Logo.png");
+  background-size: contain;
+}
+.list li:nth-child(3) {
+  background-color: #F2DBAE;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+.list li:nth-child(3):hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-image: url("https://www.freepnglogos.com/uploads/logo-gmail-png/logo-gmail-png-gmail-icon-download-png-and-vector-1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.list li:nth-child(4) {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  text-transform: uppercase;
+  background-color: #87b8f8;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+.list li:nth-child(4):hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-image: url("https://freepngimg.com/thumb/money/75358-mobile-money-telephone-call-phones-bank-gmail.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.sec2 {
-  text-align: center;
+@media (min-width: 768px) {
+  .list {
+    height: 80vh;
+    width: 90vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1em;
+  }
+  .list li {
+    list-style-type: none;
+    -webkit-box-shadow: 0.25em 0.25em 1em 0.5em rgba(27, 59, 131, 0.5);
+            box-shadow: 0.25em 0.25em 1em 0.5em rgba(27, 59, 131, 0.5);
+    cursor: pointer;
+    font-size: 0.75em;
+    width: 15vw;
+    height: 15vw;
+    border: 1px solid inherit;
+    border-radius: 0.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: -webkit-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  }
+  .list li:first-child a, .list li:nth-child(2) a {
+    background-color: #0072b1;
+    border: 1px solid inherit;
+    border-radius: 0.5em;
+    overflow: hidden;
+    text-transform: uppercase;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: -webkit-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .list li:first-child a:hover, .list li:nth-child(2) a:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-image: url("https://about.linkedin.com/etc.clientlibs/settings/wcm/designs/gandalf/clientlibs/resources/images/og-social-share-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .list li:nth-child(2) a {
+    background-color: #f9efda;
+  }
+  .list li:nth-child(2) a:hover {
+    background-image: url("https://lthub.ubc.ca/files/2021/06/GitHub-Logo.png");
+    background-size: contain;
+  }
+  .list li:nth-child(3) {
+    background-color: #F2DBAE;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: -webkit-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  }
+  .list li:nth-child(3):hover {
+    -webkit-transform: none;
+            transform: none;
+    background-image: url("https://www.freepnglogos.com/uploads/logo-gmail-png/logo-gmail-png-gmail-icon-download-png-and-vector-1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .list li:nth-child(4) {
+    -webkit-transform: none;
+            transform: none;
+    text-transform: uppercase;
+    background-color: #87b8f8;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: -webkit-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  }
+  .list li:nth-child(4):hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    background-image: url("https://freepngimg.com/thumb/money/75358-mobile-money-telephone-call-phones-bank-gmail.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+.list-link {
+  text-decoration: none;
+  color: #000;
 }
 
-.r1 {
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-}
-
-.redirect {
-  z-index: 99;
-  background-color: #0439d8;
-  border-radius: 50%;
-  padding: 1em;
-  padding-bottom: 0.3em;
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  font-size: 1.15em;
-  width: 50px;
-  border: none;
+.toast-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #05C7F2;
   color: #F26241;
 }
-.redirect:hover {
-  -webkit-box-shadow: 0px 0px 5px 3px orangered;
-          box-shadow: 0px 0px 5px 3px orangered;
-  color: #dd350f;
+
+.box-animation {
+  -webkit-animation: show-block 1s ease-in-out 0.15s both;
+          animation: show-block 1s ease-in-out 0.15s both;
 }
 
+@-webkit-keyframes show-block {
+  0% {
+    -webkit-transform: translateX(-100em) rotate(-45deg);
+            transform: translateX(-100em) rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0);
+            transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes show-block {
+  0% {
+    -webkit-transform: translateX(-100em) rotate(-45deg);
+            transform: translateX(-100em) rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0);
+            transform: translateX(0) rotate(0);
+  }
+}
 footer {
-  background-color: #16d1fa;
+  background-color: #7ae5fc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12627,74 +13087,6 @@ footer a:hover {
   color: yellow;
 }
 
-.contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
-  background-color: white;
-}
-.contact h1, .contact .h1, .contact p {
-  color: #ef3b11;
-}
-
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5em;
-  width: 90%;
-  border-radius: 0.25em;
-  background-color: #F2DBAE;
+.footer-name {
   color: #F26241;
-}
-form label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 80%;
-}
-
-input[type=text], input[type=mail] {
-  width: 80%;
-  padding: 0.15em;
-  border: none;
-  border-radius: 0.25em;
-  color: #ef3b11;
-}
-
-textarea {
-  max-height: 45vh;
-  border: none;
-  border-radius: 0.25em;
-  color: #ef3b11;
-}
-
-.required {
-  color: red;
-}
-
-.btn {
-  background-color: #ff7d4d;
-}
-.btn:hover {
-  background-color: #ff4d4d;
-  color: #b7d5fb;
 }/*# sourceMappingURL=index.css.map */
