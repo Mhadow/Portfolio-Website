@@ -1,1 +1,6 @@
 /node_modules
+
+# php stuff
+
+/mail_handler.php
+/style_php.css

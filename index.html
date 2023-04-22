@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="icon"
+      href="https://waspmobile.com/wp-content/uploads/2014/03/web-dev-icon-2.png"
+    />
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navId">
     <!-- menu  -->
@@ -44,24 +48,21 @@
 
     <!-- header -->
 
-    <header id="info">
+    <header class="header-container" id="info">
       <section class="desc mx-auto my-4">
         <img
           class="profile"
-          src="https://picsum.photos/150/150"
+          src="https://stagiipebune.ro/media/cache/b0/20/b020590608fcd4c6564ac0205857c5ef.png"
           alt="profile"
         />
-        <h1 class="name">Plaveholder name</h1>
-        <h5 class="function">placeholder function</h5>
-        <p class="about">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores,
-          maiores sequi. Quos, vel velit minus, accusantium iste harum mollitia
-          repellendus odit perferendis doloremque labore similique aspernatur?
-          At iste provident quibusdam dolor cumque quidem ea blanditiis,
-          inventore autem vero itaque similique officia exercitationem.
-          Cupiditate culpa itaque quo obcaecati! Eveniet ea sint repudiandae
-          culpa explicabo minima asperiores, quaerat aliquid magni iure
-          repellendus!
+        <h1 class="name">ROBU Marius Mădălin</h1>
+        <h5 class="function">- Frontend Web Developer -</h5>
+        <p class="about mx-auto">
+          <span style="color: red">Hello</span>, I am a persistent and ambitious
+          person who strives to learn something new every day. I enjoy building
+          apps from scratch and I love animations. As I'm more of a indoors guy,
+          in my spare time I'll be caught watching anime or playing a story
+          driven video game.
         </p>
       </section>
     </header>
@@ -175,32 +176,38 @@
       <section class="info-extra">
         <article class="card card-ed">
           <img
-            src="https://picsum.photos/450/450"
+            src="https://liberinteleorman.ro/wp-content/uploads/2015/03/Colegiul-national-Anastasescu.jpg"
             alt="school"
             class="card-image-top card-image-ed"
           />
           <div class="card-body card-body-ed">
-            <h5 class="card-title card-title-ed">Lorem, ipsum dolor.</h5>
+            <h5 class="card-title card-title-ed">
+              "Anastasescu" National College (Oct 2013 - Jul 2017)
+            </h5>
             <p class="card-text card-text-ed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, rem
-              necessitatibus tempore itaque adipisci id repudiandae
-              exercitationem nihil similique quasi.
+              During highschool years I learned a lot about how to think about
+              approaching problems and what are the best ways to solve them and
+              how to get the right information needed for the task and put it to
+              use efficiently.
             </p>
           </div>
         </article>
 
         <article class="card card-ed2">
           <img
-            src="https://picsum.photos/450/450"
+            src="https://anchetaonline.ro/wp-content/uploads/2023/04/18/341268776_1271166183783791_6834998225209442043_n.jpg"
             alt="school"
             class="card-image-top card-image-ed"
           />
           <div class="card-body card-body-ed">
-            <h5 class="card-title card-title-ed">Lorem, ipsum dolor.</h5>
+            <h5 class="card-title card-title-ed">
+              University POLITEHNICA of Bucharest (Oct 2019 - )
+            </h5>
             <p class="card-text card-text-ed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, rem
-              necessitatibus tempore itaque adipisci id repudiandae
-              exercitationem nihil similique quasi.
+              <i style="color: black">Specialization:</i> Applied Informatics in
+              Industrial Engineering<br />
+              <i style="color: black">Relavant classes:</i> Databases,
+              Interfaces and Web Services, Math
             </p>
           </div>
         </article>
@@ -216,37 +223,37 @@
     <section class="tech mx-auto" id="technologies">
       <a class="anchor"></a>
       <article class="sec1">
-        <h3>Technologies</h3>
+        <h3 id="tech-header1">Technologies</h3>
         <ul>
-          <li>
+          <li class="tech-item1" id="tech1">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png"
               alt="html5"
               title="HTML5"
             />
           </li>
-          <li>
+          <li class="tech-item2" id="tech2">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
               alt="css3"
               title="CSS3"
             />
           </li>
-          <li>
+          <li class="tech-item3" id="tech3">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png"
               alt="javascript"
               title="ECMAScript 2017"
             />
           </li>
-          <li>
+          <li class="tech-item4" id="tech4">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png"
               alt="sass"
               title="SASS"
             />
           </li>
-          <li>
+          <li class="tech-item5" id="tech5">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png"
               alt="bootstrap5"
@@ -256,16 +263,16 @@
         </ul>
       </article>
       <article class="sec2">
-        <h3>Tools</h3>
+        <h3 id="tech-header2">Tools</h3>
         <ul>
-          <li>
+          <li class="tech-item6" id="tech6">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
               alt="vscode"
               title="Visual Studio Code"
             />
           </li>
-          <li>
+          <li class="tech-item7" id="tech7">
             <img
               src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
               alt="github"
@@ -286,50 +293,39 @@
           <div class="info" id="pan1">
             <a
               class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              href="https://mhadow.github.io/Todo-App/main.html"
               target="_blank"
-              >demo</a
+              >DEMO</a
             >
             <a
               class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
+              href="https://github.com/Mhadow/Todo-App"
               target="_blank"
-              >code</a
+              >CODE</a
             >
           </div>
           <img
-            src="https://picsum.photos/450/450"
+            src="imgs\thumb1.png"
             alt="project1"
-            class="card-image-top"
+            class="card-image-top card-image-proj"
           />
           <div class="card-body">
-            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+            <h2 class="card-title">ToDo App</h2>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-              distinctio. Provident, quidem deleniti, ipsam ratione ipsum eaque
-              amet voluptatibus consequuntur voluptatem ab consequatur adipisci,
-              error tenetur officia soluta minima mollitia.
+              An app that keeps track of tasks that must be completed sometime
+              in the future. Completed tasks can be seen in a separate tab and a
+              counter displays how many tasks are left to do at any time. Also a
+              task's content can be edited whenever the user wishes to.
             </p>
           </div>
         </article>
 
-        <article class="card card-proj">
-          <div class="info" id="pan2">
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >demo</a
-            >
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >code</a
-            >
+        <article class="card card-proj card-proj-unfinished">
+          <div class="construction" id="pan2">
+            <h1 class="construction-text">under construction</h1>
           </div>
           <img
-            src="https://picsum.photos/150/150"
+            src="https://picsum.photos/150/100"
             alt="project1"
             class="card-image-top"
           />
@@ -343,23 +339,31 @@
           </div>
         </article>
 
-        <article class="card card-proj">
-          <div class="info" id="pan3">
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >demo</a
-            >
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >code</a
-            >
+        <article class="card card-proj card-proj-unfinished">
+          <div class="construction" id="pan3">
+            <h1 class="construction-text">under construction</h1>
           </div>
           <img
-            src="https://picsum.photos/150/150"
+            src="https://picsum.photos/150/100"
+            alt="project1"
+            class="card-image-top card-image-proj"
+          />
+          <div class="card-body">
+            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              voluptate libero dolorum error voluptatibus eligendi officiis
+              nesciunt qui itaque nisi.
+            </p>
+          </div>
+        </article>
+
+        <article class="card card-proj card-proj-unfinished">
+          <div class="construction" id="pan4">
+            <h1 class="construction-text">under construction</h1>
+          </div>
+          <img
+            src="https://picsum.photos/150/100"
             alt="project1"
             class="card-image-top"
           />
@@ -373,23 +377,12 @@
           </div>
         </article>
 
-        <article class="card card-proj">
-          <div class="info" id="pan4">
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >demo</a
-            >
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >code</a
-            >
+        <article class="card card-proj card-proj-unfinished">
+          <div class="construction" id="pan5">
+            <h1 class="construction-text">under construction</h1>
           </div>
           <img
-            src="https://picsum.photos/150/150"
+            src="https://picsum.photos/150/100"
             alt="project1"
             class="card-image-top"
           />
@@ -403,53 +396,12 @@
           </div>
         </article>
 
-        <article class="card card-proj">
-          <div class="info" id="pan5">
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >demo</a
-            >
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >code</a
-            >
+        <article class="card card-proj card-proj-unfinished">
+          <div class="construction" id="pan6">
+            <h1 class="construction-text">under construction</h1>
           </div>
           <img
-            src="https://picsum.photos/150/150"
-            alt="project1"
-            class="card-image-top"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-              voluptate libero dolorum error voluptatibus eligendi officiis
-              nesciunt qui itaque nisi.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-proj">
-          <div class="info" id="pan6">
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >demo</a
-            >
-            <a
-              class="btn btn-info"
-              href="https://alvarotrigo.com/blog/css-animations-scroll/"
-              target="_blank"
-              >code</a
-            >
-          </div>
-          <img
-            src="https://picsum.photos/150/150"
+            src="https://picsum.photos/150/100"
             alt="project1"
             class="card-image-top"
           />
@@ -477,18 +429,25 @@
 
     <!-- contact section -->
 
-    <section class="contact p-4" id="contact">
+    <section class="contact" id="contact">
       <a class="anchor"></a>
       <h1 class="pt-lg-5">Contact</h1>
-      <p class="message pb-sm-2">
+      <p class="pb-sm-2">
         For any questions, please click on one of the options below
       </p>
       <ul class="list">
         <li>
-          <a href="#" target="_blank" class="list-link">Hover over me</a>
+          <a
+            href="https://www.linkedin.com/in/robu-marius-madalin/"
+            target="_blank"
+            class="list-link"
+            >Hover over me</a
+          >
         </li>
         <li>
-          <a href="#" target="_blank" class="list-link">Hover over me</a>
+          <a href="https://github.com/Mhadow" target="_blank" class="list-link"
+            >Hover over me</a
+          >
         </li>
         <li id="contact-mail">Hover over me</li>
         <li id="contact-phone">Hover over me</li>
@@ -525,43 +484,6 @@
           <div class="toast-body">Phone number copied to clipboard.</div>
         </div>
       </div>
-
-      <!-- <svg class="contact-blocks" viewBox="-100 -100,500,500">
-        <rect x="-100" y="100" width="150" height="150" class="contact-box1" />
-        <rect
-          x="10"
-          y="250"
-          width="100"
-          height="100"
-          fill="red"
-          class="contact-box2"
-        />
-        <rect
-          x="100"
-          y="50"
-          width="100"
-          height="100"
-          fill="blue"
-          class="contact-box3"
-        />
-        <rect
-          x="300"
-          y="250"
-          width="100"
-          height="100"
-          fill="green"
-          class="contact-box4"
-        />
-      </svg> -->
-      <!-- <form method="post" action="mail_handler.php" class="py-2">
-        <label for="name">Name:<span class="required">*</span></label>
-        <input type="text" name="name" required />
-        <label for="mail">Email:<span class="required">*</span></label>
-        <input type="mail" name="mail" />
-        <label for="message">Please type your message here:</label>
-        <textarea name="message" id="textBlock" cols="30" rows="6"></textarea>
-        <input type="submit" class="btn" name="submit" />
-      </form> -->
     </section>
 
     <!-- links section -->
