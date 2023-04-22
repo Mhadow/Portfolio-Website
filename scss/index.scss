@@ -117,6 +117,17 @@ body {
     
 }
 
+@keyframes svg_show {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 1400;
+    }
+    
+}
+
 @keyframes svg_flag_pole {
     from {
         stroke-width: 0;
@@ -362,7 +373,8 @@ header{
     width: 75%;
     text-indent: 1em;
     text-align: justify;
-    color: lighten($tertiary-color, 10);
+    color: lighten($secondary-color, 40);
+    background-color: rgba(36, 90, 219, 0.3);
 }
 
 .function {
@@ -583,7 +595,7 @@ header{
     }
     
     .svg-show {
-        animation: svg-anim 1.5s ease-in-out both;
+        animation: svg_anim 1.5s ease-in-out both;
     }
     
     .svg-progress {

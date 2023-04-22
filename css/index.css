@@ -12273,6 +12273,22 @@ body {
     width: 1400;
   }
 }
+@-webkit-keyframes svg_show {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1400;
+  }
+}
+@keyframes svg_show {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1400;
+  }
+}
 @-webkit-keyframes svg_flag_pole {
   from {
     stroke-width: 0;
@@ -12609,7 +12625,8 @@ header {
   width: 75%;
   text-indent: 1em;
   text-align: justify;
-  color: #f9efda;
+  color: #c5f4fe;
+  background-color: rgba(36, 90, 219, 0.3);
 }
 
 .function {
@@ -12819,8 +12836,8 @@ header {
     position: absolute;
   }
   .svg-show {
-    -webkit-animation: svg-anim 1.5s ease-in-out both;
-            animation: svg-anim 1.5s ease-in-out both;
+    -webkit-animation: svg_anim 1.5s ease-in-out both;
+            animation: svg_anim 1.5s ease-in-out both;
   }
   .svg-progress {
     -webkit-animation: svg_anim 3s ease-in-out both;
