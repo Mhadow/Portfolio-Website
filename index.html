@@ -10,6 +10,13 @@
       rel="icon"
       href="https://waspmobile.com/wp-content/uploads/2014/03/web-dev-icon-2.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navId">
     <!-- menu  -->
@@ -50,19 +57,15 @@
 
     <header class="header-container" id="info">
       <section class="desc mx-auto my-4">
-        <img
-          class="profile"
-          src="https://stagiipebune.ro/media/cache/b0/20/b020590608fcd4c6564ac0205857c5ef.png"
-          alt="profile"
-        />
+        <img class="profile" src="/imgs/prof1.jpeg" alt="profile" />
         <h1 class="name">ROBU Marius Mădălin</h1>
         <h5 class="function">- Frontend Web Developer -</h5>
         <p class="about mx-auto">
           <span style="color: red">Hello</span>, I am a persistent and ambitious
-          person who strives to learn something new every day. I enjoy building
-          apps from scratch and I love animations. As I'm more of a indoors guy,
-          in my spare time I'll be caught watching anime or playing a story
-          driven video game.
+          person who strives to be the best version of myself. I enjoy building
+          apps from scratch and I love animations. Organizing the day
+          efficiently is very important to me and I'm eager to learn new and
+          better ways to create interesting stuff.
         </p>
       </section>
     </header>
@@ -173,6 +176,8 @@
         <polygon points="1440 -130 1460 -110 1440 -90" class="svg-arrow" />
       </svg>
 
+      <!-- cards with info (shown after clicking a flag) -->
+
       <section class="info-extra">
         <article class="card card-ed">
           <img
@@ -214,7 +219,7 @@
       </section>
 
       <p class="hint ps-2 mt-1">
-        * Click (double click to close) on the flag for more.
+        * Click on the flag for more (click again to close).
       </p>
     </section>
 
@@ -260,23 +265,30 @@
               title="Bootstrap 5"
             />
           </li>
+          <li class="tech-item6" id="tech6">
+            <img
+              src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+              alt="git"
+              title="Git"
+            />
+          </li>
         </ul>
       </article>
       <article class="sec2">
         <h3 id="tech-header2">Tools</h3>
         <ul>
-          <li class="tech-item6" id="tech6">
+          <li class="tech-item7" id="tech7">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
               alt="vscode"
               title="Visual Studio Code"
             />
           </li>
-          <li class="tech-item7" id="tech7">
+          <li class="tech-item8" id="tech8">
             <img
               src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
               alt="github"
-              title="Git/Github"
+              title="Github"
             />
           </li>
         </ul>
@@ -310,7 +322,7 @@
             class="card-image-top card-image-proj"
           />
           <div class="card-body">
-            <h2 class="card-title">ToDo App</h2>
+            <h2 class="card-title card-title-proj">ToDo App</h2>
             <p class="card-text">
               An app that keeps track of tasks that must be completed sometime
               in the future. Completed tasks can be seen in a separate tab and a
@@ -330,83 +342,9 @@
             class="card-image-top"
           />
           <div class="card-body">
-            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-              voluptate libero dolorum error voluptatibus eligendi officiis
-              nesciunt qui itaque nisi.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-proj card-proj-unfinished">
-          <div class="construction" id="pan3">
-            <h1 class="construction-text">under construction</h1>
-          </div>
-          <img
-            src="https://picsum.photos/150/100"
-            alt="project1"
-            class="card-image-top card-image-proj"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-              voluptate libero dolorum error voluptatibus eligendi officiis
-              nesciunt qui itaque nisi.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-proj card-proj-unfinished">
-          <div class="construction" id="pan4">
-            <h1 class="construction-text">under construction</h1>
-          </div>
-          <img
-            src="https://picsum.photos/150/100"
-            alt="project1"
-            class="card-image-top"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-              voluptate libero dolorum error voluptatibus eligendi officiis
-              nesciunt qui itaque nisi.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-proj card-proj-unfinished">
-          <div class="construction" id="pan5">
-            <h1 class="construction-text">under construction</h1>
-          </div>
-          <img
-            src="https://picsum.photos/150/100"
-            alt="project1"
-            class="card-image-top"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-              voluptate libero dolorum error voluptatibus eligendi officiis
-              nesciunt qui itaque nisi.
-            </p>
-          </div>
-        </article>
-
-        <article class="card card-proj card-proj-unfinished">
-          <div class="construction" id="pan6">
-            <h1 class="construction-text">under construction</h1>
-          </div>
-          <img
-            src="https://picsum.photos/150/100"
-            alt="project1"
-            class="card-image-top"
-          />
-          <div class="card-body">
-            <h2 class="card-title">Lorem ipsum dolor sit amet.</h2>
+            <h2 class="card-title card-title-proj">
+              Lorem ipsum dolor sit amet.
+            </h2>
             <p class="card-text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
               voluptate libero dolorum error voluptatibus eligendi officiis
@@ -424,7 +362,7 @@
       title="Scroll back to the top"
       onclick="scrollToTop()"
     >
-      ^
+      <i class="fa-solid fa-circle-arrow-up"></i>
     </button>
 
     <!-- contact section -->

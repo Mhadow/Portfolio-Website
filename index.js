@@ -25,6 +25,7 @@ const techItem4 = document.getElementById("tech4");
 const techItem5 = document.getElementById("tech5");
 const techItem6 = document.getElementById("tech6");
 const techItem7 = document.getElementById("tech7");
+const techItem8 = document.getElementById("tech8");
 
 const techSection = document.getElementById("technologies");
 
@@ -119,20 +120,35 @@ function showBox2() {
 function hideBox2() {
   infoBoxEl2.style.visibility = "hidden";
 }
+console.log(infoBoxEl1.classList.contains("show-box"));
 
-f1El.addEventListener("click", showBox1);
-f1El.addEventListener("dblclick", hideBox1);
-f2El.addEventListener("click", showBox2);
-f2El.addEventListener("dblclick", hideBox2);
+f1El.addEventListener("click", () => {
+  if (infoBoxEl1.classList.contains("show-box")) {
+    infoBoxEl1.classList.remove("show-box");
+  } else {
+    infoBoxEl1.classList.add("show-box");
+  }
+});
+
+f2El.addEventListener("click", () => {
+  if (infoBoxEl2.classList.contains("show-box")) {
+    infoBoxEl2.classList.remove("show-box");
+  } else {
+    infoBoxEl2.classList.add("show-box");
+  }
+});
+// f1El.addEventListener("dblclick", hideBox1);
+// f2El.addEventListener("click", showBox2);
+// f2El.addEventListener("dblclick", hideBox2);
 
 // hides info boxes if the user scrolls somewhere else on the page and the boxes are still open
 
 const observerInfo1 = new IntersectionObserver((els) => {
   els.forEach((el) => {
     if (!el.isIntersecting && window.innerWidth > 768) {
-      el.target.style.visibility = "hidden";
+      el.target.classList.remove("show-box");
     } else if (window.innerWidth < 768) {
-      el.target.style.visibility = "visible";
+      el.target.classList.add("show-box");
     }
   });
 });
@@ -142,9 +158,9 @@ observerInfo1.observe(document.querySelector(".card-ed"));
 const observerInfo2 = new IntersectionObserver((els) => {
   els.forEach((el) => {
     if (!el.isIntersecting && window.innerWidth > 768) {
-      el.target.style.visibility = "hidden";
+      el.target.classList.remove("show-box");
     } else if (window.innerWidth < 768) {
-      el.target.style.visibility = "visible";
+      el.target.classList.add("show-box");
     }
   });
 });
@@ -256,6 +272,7 @@ const techObserver = new IntersectionObserver((els) => {
       techItem5.classList.add("tech-item5-anim");
       techItem6.classList.add("tech-item6-anim");
       techItem7.classList.add("tech-item7-anim");
+      techItem8.classList.add("tech-item8-anim");
     } else {
       techHeader1.classList.remove("header-anim");
       techHeader2.classList.remove("header-anim");
@@ -266,6 +283,7 @@ const techObserver = new IntersectionObserver((els) => {
       techItem5.classList.remove("tech-item5-anim");
       techItem6.classList.remove("tech-item6-anim");
       techItem7.classList.remove("tech-item7-anim");
+      techItem8.classList.remove("tech-item8-anim");
     }
   });
 });

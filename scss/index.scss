@@ -39,26 +39,32 @@ body {
 
 .redirect {
     z-index: 99;
-    background-color: lighten($aux-color, 10);
-    border-radius: 50%;
     padding: 1em;
     padding-bottom: 0.3em;
     position: fixed;
     bottom: 40px;
-    right: 20px;
+    right: 40px;
     font-size: 1.15em;
     width: 50px;
     border: none;
-    color: $text-color;
+    background-color: transparent;
+
+}
+
+.redirect-hide {
+    display: none;
+}
+
+.fa-circle-arrow-up{
+    font-size: 3em;
+    color: lighten($aux-color, 10);
+    background-color: inherit;
+    border-radius: 50%;
 
     &:hover {
         box-shadow: 0px 0px 5px 3px orangered;
         color: darken($text-color, 14);
     }
-}
-
-.redirect-hide {
-    display: none;
 }
 
 // scrollbar css
@@ -278,6 +284,18 @@ body {
     }
 }
 
+@keyframes show-tech8 {
+    from {
+        right: -1000em;
+        top: -500em;
+    }
+
+    to {
+       right: 0;
+       top: 0;
+    }
+}
+
 // menu css
 
 nav {
@@ -315,7 +333,7 @@ nav {
 }
 
 .active {
-    background-color: lighten($aux-color, 10);
+    background-color: lighten($aux-color, 30);
 }
 
 .navbar-toggler-icon {
@@ -341,12 +359,6 @@ header{
     display: flex;
 }
 
-@media (min-width: 900px) {
-    header {
-        height: 90.5vh;
-    }
-} 
-
 .header-container {
     position: relative;
     left: -100em;
@@ -363,7 +375,9 @@ header{
 }
 
 .profile {
-    border-radius: 5em;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
 }
 
 .about {
@@ -379,7 +393,7 @@ header{
 
 .function {
     flex-grow: 0.25;
-    padding-top: 0.3em;
+    padding-top: 0.4em;
 }
 
 @media (min-width: 700px) and (max-width: 900px) {
@@ -399,7 +413,7 @@ header{
 }
 
 .function {
-    color: lighten($text-color, 35);
+    color: lighten($aux-color, 5);
     font-weight: 700;
 }
 
@@ -412,6 +426,16 @@ header{
         font-size: 1em;
     }
 }
+
+@media (min-width: 900px) {
+    header {
+        height: 90.5vh;
+    }
+
+    .function {
+        color: lighten($tertiary-color, 15);
+    }
+} 
 
 // TIMELINE CSS
 
@@ -444,12 +468,6 @@ header{
     }
 }
 
-@media (min-width: 768px) {
-    .timeline {
-        height: 92vh;
-    }
-}
-
 .timeline-title {
     text-align: center;
     color: lighten($text-color,25);
@@ -467,7 +485,7 @@ header{
     height: 35%;
     width: 80%;
     color: darken($tertiary-color, 15);
-    background-color: darken($text-color,5) ;
+    background-color: lighten($main-color,5) ;
     border: none;
     margin: 1em auto;
     visibility: visible;
@@ -492,22 +510,25 @@ header{
 }
 
 .card-title-ed {
-    color: lighten($secondary-color, 10);
-    font-size: 1.1em;
+    color: lighten($secondary-color, 20);
 }
 
 @media (min-width: 768px) {
+    .timeline {
+        height: 100vh;
+    }
+
     .timeline-title {
         height: 5vh;
         padding-top: 0;
     }
 
     .card-ed, .card-ed2 {
-    height: 75%;
-    width: 42%;
+    height: 80%;
+    width: 35%;
     box-shadow: 0.25em 0.25em 0.2em 0.25em rgba(0,0,0,0.55);
     visibility: hidden;
-    font-size: 0.75em;
+    font-size: 0.8em;
  }
 
  .card-ed2 {
@@ -516,11 +537,12 @@ header{
 
 .info-extra {
     width: 90%;
+    height: 70%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
-    top: -5em;
+    top: -3em;
 }
 
 .card-image-ed {
@@ -533,15 +555,11 @@ header{
 
 .card-body-ed {
     width: 100%;
-    height: 25%;
-}
-
-.card-title-ed {
-    color: darken($text-color, 45);
+    height: 45%;
 }
 
 .card-text-ed {
-    height: 100%;
+    height: 90%;
     width: 100%;
 }
 }
@@ -555,7 +573,7 @@ header{
 
     .card-ed, .card-ed2 {
         width: 32%;
-        height: 70%;
+        height: 76%;
         margin-bottom: 2em;
     }
 }
@@ -567,21 +585,28 @@ header{
 
     .card-ed, .card-ed2 {
         font-size: 0.9em;
-        height: 66%;
+        height: 69%;
         width: 30%;
     }
 }
 
 @media (min-width: 1400px) {
     .info-extra {
-        top: 2em;
+        top: 0;
     }
 
     .card-ed, .card-ed2 {
-        height: 62%;
+        height: 75%;
+        width: 25%;
         font-size: 1em;
-        margin-bottom: 0.25em;
+        margin-bottom: 1.9em;
     }
+}
+
+// shows the info boxes when the flag is clicked
+
+.show-box {
+    visibility: visible;
 }
 
 // SVG CSS (only displayed on bigger screens)
@@ -662,7 +687,7 @@ header{
     }
 }
 
-// tech css
+// TECH CSS
 
 .tech {
     display: flex;
@@ -670,7 +695,7 @@ header{
     align-items: flex-start;
     background-color: lighten($main-color,20);
     height: 100vh;
-    padding-top: 6em;
+    padding-top: 3em;
     overflow: hidden;
 }
 
@@ -702,13 +727,15 @@ li > img {
     height: $img-height;
 }
 
+// tech items animations
+
 .tech-item1 {
     top: -1000em;
     left: -1000em;
 }
 
 .tech-item1-anim {
-    animation: show-tech1 1.5s ease-in-out both;
+    animation: show-tech1 1.3s ease-in-out both;
 }
 
 .tech-item2 {
@@ -716,7 +743,7 @@ li > img {
 }
 
 .tech-item2-anim {
-    animation: show-tech2 1.6s ease-in-out both;
+    animation: show-tech2 1.4s ease-in-out both;
 }
 
 .tech-item3 {
@@ -724,7 +751,7 @@ li > img {
 }
 
 .tech-item3-anim {
-    animation: show-tech3 1.7s ease-in-out both;
+    animation: show-tech3 1.5s ease-in-out both;
 }
 
 .tech-item4 {
@@ -733,7 +760,7 @@ li > img {
 }
 
 .tech-item4-anim {
-    animation: show-tech4 1.8s ease-in-out both;
+    animation: show-tech4 1.6s ease-in-out both;
 }
 
 .tech-item5 {
@@ -741,7 +768,7 @@ li > img {
 }
 
 .tech-item5-anim {
-    animation: show-tech5 1.9s ease-in-out both;
+    animation: show-tech5 1.7s ease-in-out both;
 }
 
 .tech-item6 {
@@ -749,7 +776,7 @@ li > img {
 }
 
 .tech-item6-anim {
-    animation: show-tech6 1.9s ease-in-out both;
+    animation: show-tech6 1.8s ease-in-out both;
 }
 
 .tech-item7 {
@@ -758,7 +785,16 @@ li > img {
 }
 
 .tech-item7-anim {
-    animation: show-tech7 2s ease-in-out both;
+    animation: show-tech7 1.9s ease-in-out both;
+}
+
+.tech-item8 {
+    right: -500em;
+    top: -1000em;
+}
+
+.tech-item8-anim {
+    animation: show-tech8 2s ease-in-out both;
 }
 
 // projects css
@@ -790,7 +826,7 @@ li > img {
     border: none;
 }
 
-.card-title {
+.card-title-proj {
     color: lighten($secondary-color, 10);
 }
 
@@ -839,7 +875,7 @@ li > img {
     color: white;
 }
 
-.card-proj:hover{
+.info > .btn:hover{
     cursor: pointer;
 }
 
@@ -852,7 +888,7 @@ li > img {
     .projects {
         display: grid;
         grid-template-columns: repeat(auto-fit, 400px);
-        grid-template-rows: repeat(2, 450px);
+        grid-template-rows: repeat(1, 450px);
         gap: 1.5em;
         justify-items: center;
         padding-left: 0;
@@ -885,10 +921,10 @@ li > img {
     width: 100%;
     height: 100vh;
     
-    background-color: lighten($tertiary-color, 15);
+    background-color: lighten($secondary-color, 35);
 
     & h1, p {
-        color: darken($text-color, 10);
+        color: $text-color;
     }
 }
 
